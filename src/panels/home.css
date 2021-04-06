@@ -1,0 +1,60 @@
+.Gallery {
+  height: auto;
+}
+
+.category {
+  margin-bottom: 16px;
+}
+
+.category__all-button {
+  cursor: pointer;
+  color: var(--counter_primary_background);
+}
+
+.main-content {
+  max-width: 600px;
+  width: calc(100% - 32px);
+  margin: 0 auto;
+}
+
+.emoji-placeholder {
+  font-size: 60px;
+  line-height: 1px;
+}
+
+.emoji-placeholder img {
+  width: 84px;
+}
+
+.emoji-placeholder .Placeholder__icon {
+  margin-bottom: 0px;
+}
+
+.hub-slider .Gallery__layer {
+  align-items: center;
+}
+
+.hub-slide {
+  margin-right: 8px;
+}
+
+.add-new-slide {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.Snackbar {
+  z-index: 99999999;
+}
+
+.Root--android #panel_main .PanelHeader__content-in {
+  padding-top: 6px !important;
+}
+.PanelHeader__content-in {
+  font-weight: 600;
+}
+
+.Gallery__slide {
+  margin-right: 8px;
+}

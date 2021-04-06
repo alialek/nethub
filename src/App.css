@@ -1,0 +1,85 @@
+.d-col {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+}
+
+.d-row,
+.d-flex {
+  display: flex !important;
+}
+.spacer-1 {
+  width: 8px;
+}
+
+.fill-width {
+  width: 100%;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-space-evenly {
+  justify-content: space-evenly;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.p-absolute {
+  position: absolute;
+}
+
+.custom-header--shown {
+  visibility: visible !important;
+  opacity: 1 !important;
+  transition: visibility 1s, opacity 0.3s linear;
+}
+
+.custom-header {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 1s, opacity 0.3s linear;
+}
+
+.my-1 {
+  margin: 8px 0;
+}
+
+.Switch--ios .Switch__pseudo {
+  border: 2px solid rgba(140, 140, 140, 0.2);
+}
+
+.chips > * {
+  margin-top: 8px;
+  margin-right: 8px;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 12px 0;
+  width: 100%;
+  max-width: 400px;
+}
+
+.PanelHeader__content {
+  overflow: unset !important;
+}

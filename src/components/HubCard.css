@@ -1,0 +1,63 @@
+.hub-card {
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.hub-card__content {
+  display: flex;
+}
+
+.hub-card__title {
+  line-height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hub-card__header {
+  margin-bottom: 4px;
+}
+
+.hub-card__header > div {
+  flex-basis: auto;
+  overflow: hidden;
+}
+
+.hub-card__logo {
+  height: 56px;
+  width: 56px;
+  border-radius: 100px;
+  margin-bottom: 8px;
+}
+.hub-card__left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hub-card__right {
+  padding-left: 16px;
+  flex-grow: 2;
+  overflow: hidden;
+}
+
+.hub-card__right > div {
+  overflow: hidden;
+}
+
+.hub-card__right .Caption {
+  color: var(--text_subhead);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.Separator__in {
+  margin-left: unset !important;
+  margin-right: unset !important;
+}
+
+.Header__in {
+  padding: unset !important;
+}

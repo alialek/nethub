@@ -1,34 +1,54 @@
 import React, { Component } from "react";
-import { withRouter } from "@happysanta/router";
+import { useRouter } from "@happysanta/router";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import { Button, ModalCard, Textarea } from "@vkontakte/vkui";
+import {
+  Button,
+  Chip,
+  Link,
+  ModalCard,
+  Subhead,
+  Text,
+  Title,
+} from "@vkontakte/vkui";
+import { MODAL_INSTRUCTION } from "../router";
 
-class AboutCard extends Component {
-  render() {
-    return (
-      <ModalCard
-        id={this.props.id}
-        onClose={() => this.props.router.popPage()}
-        header="Настройки"
-        actions={
-          <Button size="l" mode="primary">
-            Сохранить
-          </Button>
-        }
-      >
-        <Textarea
-          top="О себе"
-          maxLength="140"
-          placeholder="Здесь ты можешь оставить любую информацию о себе, которая будет полезна участникам"
-        />
-      </ModalCard>
-    );
-  }
-}
+const AboutCard = ({ id }) => {
+  const router = useRouter();
+  return (
+    <ModalCard
+      actionsLayout={"vertical"}
+      id={id}
+      onClose={router.popPage}
+      header="About NetHub"
+      actions={[
+        <Button onClick={router.popPage} size="l" stretched mode={"secondary"}>
+          Close
+        </Button>,
+      ]}
+    >
+      <Text style={{ marginTop: 8, opacity: 0.7 }}>
+        NetHub is a catalog of open voice chats on Telegram. Create interactive
+        podcasts, meet new people and share stories with them. <br />
+        <br />
+      </Text>
+      <Title weight="semibold">How to add a channel?</Title>
+      <Text style={{ marginTop: 8, opacity: 0.7 }}>
+        {" "}
+        Just start our bot
+        <Link href="https://t.me/nethub_bot" target="_blank">
+          <Chip removable={false}>@nethub_bot</Chip>
+        </Link>{" "}
+        and follow the instructions.
+      </Text>
+    </ModalCard>
+  );
+};
 
 const mapStateToProps = (state) => {
-  return {};
+  return {
+    snackbar: state.data.snackbar,
+  };
 };
 
 function mapDispatchToProps(dispatch) {
@@ -38,7 +58,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(withRouter(AboutCard));
+export default connect(mapStateToProps, mapDispatchToProps)(AboutCard);

@@ -1,4 +1,6 @@
-import { auth } from './rest/auth';
-import {setIntroViewed} from './vk'
+import { search } from "./rest/search";
+import { category } from "./rest/category";
+import { home } from "./rest/home";
+import { roomById } from "./rest/room";
 
-export { auth, setIntroViewed };
+export { search, category, home, roomById };

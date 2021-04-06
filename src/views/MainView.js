@@ -1,22 +1,17 @@
 import MainPanel from "../panels/MainPanel";
 
-import React, { Component } from "react";
+import React from "react";
 import { View } from "@vkontakte/vkui";
-import { PANEL_MAIN } from "./../router";
+import { PANEL_CATEGORY, PANEL_MAIN } from "./../router";
+import CategoryPanel from "../panels/CategoryPanel";
 
-class Main extends Component {
-  render() {
-    return (
-      <View
-        id={this.props.id}
-        popout={this.props.popout}
-        modal={this.props.modal}
-        activePanel={this.props.activePanel}
-      >
-        <MainPanel id={PANEL_MAIN} />
-      </View>
-    );
-  }
-}
+const Main = ({ id, popout, modal, activePanel }) => {
+  return (
+    <View id={id} popout={popout} modal={modal} activePanel={activePanel}>
+      <MainPanel id={PANEL_MAIN} />
+      <CategoryPanel id={PANEL_CATEGORY} />
+    </View>
+  );
+};
 
 export default Main;
